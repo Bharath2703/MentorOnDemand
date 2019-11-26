@@ -1,23 +1,25 @@
-<section class="my-5 container">
-    <form class="form-signin">
+<div class="image" style="padding-bottom: 10%;">
+
+    <form class="form-signin" style="padding-top: 5%;">
 
         <div class="row">
 
             <div class="col-sm-2 col-sm-2"></div>
 
-            <div class="col-sm-4 col-sm-4">
+            <div class="col-sm-2 col-sm-2">
                 <div class="form-group">
-                    <label style="color: darkgreen;font-weight: bold">Select Your Technology</label>
+                    <label style="color: black;font-weight: bold">Select Your Technology</label>
                     <select [(ngModel)]="tech" name="tech" class="form-control mb-2 rounded text-center dropdown">
                         <option value="" disabled>Select your technology</option>
                         <option *ngFor="let t of skillData" value="{{t.name}}">{{t.name}}</option>
                     </select>
                 </div>
             </div>
-            <div class="col-sm-4 com-sm-4">
+            <br>
+            <div class="col-sm-2 com-sm-2">
                 <div class="form-group my-2">
                     <label></label>
-                    <button class="btn btn-md btn-1 btn-block" (click)="onSubmit()" style="color: white">Search
+                    <button class="btn btn-md btn-primary btn-block" (click)="onSubmit()" style="color: white">Search
                         here</button>
                 </div>
             </div>
@@ -26,16 +28,15 @@
 
         </div>
     </form>
-</section>
 
 <div *ngIf="status1" class="my-5 container">
-    <div class="jumbotron">
+    
         <div class="h4 text-center">
             <p> No search result found </p>
         </div>
         <!-- <div class="d-inline back-button"><button class="btn btn-md btn-secondary" (click)="backToHome()">Back</button>
         </div> -->
-    </div>
+    
 </div>
 <div *ngIf="status2" class="container py-4">
     <div class="row my-2">
@@ -78,4 +79,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>
