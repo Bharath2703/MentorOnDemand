@@ -1,0 +1,41 @@
+#mySidenav a {
+  position: absolute;
+ 
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#a {
+  top: 100px;
+  background-color: #4CAF50;
+}
+
+#b {
+  top: 150px;
+  background-color: #2196F3;
+}
+
+#c {
+  top: 200px;
+  background-color: #f44336;
+}
+
+#d {
+  top: 250px;
+  background-color: #555
+}
+#e {
+  top: 300px;
+  background-color: violet
+}
+

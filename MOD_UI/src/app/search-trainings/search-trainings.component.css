@@ -1,0 +1,13 @@
+.btn-1{
+    background-image: linear-gradient(to top, #a94bb9, #9b46b7, #8d42b5, #7d3eb2, #6d3ab0);
+    border-radius: 1.5rem;
+}
+
+.bg-img1 {
+    background-image: url("http://7-themes.com/data_images/out/13/6811196-stunning-black-backgrounds.jpg");
+    min-height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }

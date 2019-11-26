@@ -1,0 +1,40 @@
+<div class="bg-img" >
+
+    <div class="login-box">
+        <img src="https://png.pngtree.com/element_our/png/20181205/users-vector-icon-png_260920.jpg" class="avatar">
+        <form [formGroup]="UserLogin" autocomplete="off" (submit)="onSubmit()">
+
+            <div class="form-group required">
+                <label>Email</label>
+                <input class="form-control" formControlName="Email" placeholder="Email" style="border-radius: 1.5rem">
+                <small class="text-danger"
+                    *ngIf="UserLogin.get('Email').touched && UserLogin.get('Email').errors?.required">This
+                    field is mandatory</small>
+                <small class="text-danger"
+                    *ngIf="UserLogin.get('Email').touched && UserLogin.get('Email').errors?.pattern">Invalid
+                    Email Address</small>
+            </div>
+
+            <div class="form-group required">
+                <label>Enter Password</label>
+                <input type="password" class="form-control" formControlName="Password" placeholder="Password"
+                    style="border-radius: 1.5rem">
+                <small class="text-danger"
+                    *ngIf="UserLogin.get('Password').touched && UserLogin.get('Password').errors?.required">This
+                    field is mandatory</small>
+                <small class="text-danger"
+                    *ngIf="UserLogin.get('Password').touched && UserLogin.get('Password').errors?.minlength">Minimun
+                    4 characters required</small>
+            </div>
+
+            <br>
+            <div class="form-row">
+                <div class="form-group col-md-12" style="text-align: center">
+                    <button class="btn btn-lg btn-primary btn-block" [disabled]="!UserLogin.valid"
+                        style="border-radius: 1.8rem">Login</button>
+                     <!-- <input type="submit" style="width: 120px;margin-left:-10px;" name="submit" value="Login"> -->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
